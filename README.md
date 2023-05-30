@@ -1,5 +1,36 @@
 # Personalized Dialogue Generation by History Filtration and Query Grouping
 
+# Abstract
+Personalized dialogue generation deals with generating a response to the query
+that will signify the user’s chatting personality using the user’s dialogue history
+for the training. This problem has gained much attention in recent years because
+
+of the increasing use of personal assistance chatbots. This problem requires get-
+ting responses by handling both the user’s dialogue history and the context of
+
+the query for which the response will be generated. Since the dialogue history of
+users are likely to be large and may contain noisy utterances, it is required to
+handle the history by removing unwanted parts of the history and maintaining
+the user’s personality pattern in its responses. Major previous works using the
+user’s dialogue history randomly truncate the history to reduce the size. By such
+random truncation, it not only misses the valuable data but also the model is
+
+feeding with invaluable data, which left us with a scope of improvement by ade-
+quately handling the history data. Inspired by this, we are finding the filtered
+
+history of all users based on the responses that more closely signify the user’s
+personality. Also, previously, to find the context of the query, similar queries from
+the user history were taken or similar users were first extracted and then similar
+query from these users were taken. Finding similar users with large history don’t
+work, as encoding significant history in a single embedding vector misses much
+information. To handle this issue, we are finding a group of queries with the same
+
+context as the current one. In this way, we are finding query context and differ-
+ent forms of query. These are our two major works in this paper and the result
+
+proved that they have outperformed the previous works in all different levels of
+evaluation metrics by the range of 10-25%.
+
 Please do the operarion on main/model folder as this is the main project directory
 
 # Preinstallation
